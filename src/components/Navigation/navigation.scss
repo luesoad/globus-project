@@ -1,0 +1,18 @@
+@import "../../styles/app.scss";
+$navbar-logo-width: 150px;
+
+// Über Newsletter: 24px
+//Abstand nav-item nach unten: 28px; nach oben: 62px;
+//Abstand zwischen nav-items: 31px;
+
+.navbar {
+  &__logo {
+    width: $navbar-logo-width;
+  }
+
+  &__list {
+    //margin-top: $spacer * 3.75;
+    margin-left: calc($navbar-logo-width + $spacer);
+    //margin-bottom: $spacer * 1.25;
+  }
+}

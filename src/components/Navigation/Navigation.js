@@ -1,11 +1,25 @@
 import logo from "../../static/images/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
+import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons/faSquareInstagram";
+import "./navigation.scss";
 
+const navItems = [
+  { text: "Märkte", href: "" },
+  { text: "Bewusst Leben", href: "" },
+  { text: "Sortiment", href: "" },
+  { text: "Services", href: "" },
+  { text: "Unternehmen", href: "" },
+  { text: "Mein Globus", href: "" },
+];
+//@TODO: change id;
 const Navigation = () => {
   return (
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarTogglerDemo01"
@@ -13,47 +27,44 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" href="#">
-            <img src={logo} alt="logo" />
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a
+            className="navbar-brand navbar__logo position-absolute pt-0 top-0"
+            href="#"
+          >
+            <img src={logo} alt="logo" width="150" />
           </a>
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
-                Märkte
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Bewusst Leben
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Sortiment
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Services
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Unternehmen
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Mein Globus<span class="sr-only">(current)</span>
-              </a>
-            </li>
-          </ul>
+          <div className="d-flex justify-content-between flex-grow-1 navbar__list">
+            <ul className="navbar-nav">
+              {navItems.map((navItem) => (
+                <li
+                  key={navItem.text}
+                  className="nav-item d-flex flex-column justify-content-end"
+                >
+                  <a className="nav-link" href={navItem.href}>
+                    {navItem.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="d-flex flex-column">
+              <div>
+                <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faFacebookF} />
+                <FontAwesomeIcon icon={faSquareInstagram} />
+              </div>
+              <div>
+                <FontAwesomeIcon icon={faYoutube} />
+                <FontAwesomeIcon icon={faFacebookF} />
+                <FontAwesomeIcon icon={faSquareInstagram} />
+              </div>
+            </div>
+          </div>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 };
 

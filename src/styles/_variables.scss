@@ -1,0 +1,46 @@
+/*
+// Create your own map
+$custom-colors: (
+  "custom-color": #900
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+*/
+
+// Color system
+$white: #fff;
+$red: #c40100;
+$green: #019933;
+$gray-100: #ececec;
+$gray-800: #555;
+
+// Default variable overrides
+// scss-docs-start theme-color-variables
+$primary: #f98a00;
+$secondary: $green;
+$light: $gray-100;
+$dark: $gray-800;
+$danger: $red;
+
+// Spacing
+$spacer: 1rem;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $dark;
+
+// Typography
+$font-weight-bold: 700;
+$font-size-base: 0.875rem;
+//$font-weight-base: $font-weight-bold;
+
+// Navbar
+$navbar-light-active-color: $secondary;
+//$nav-link-padding-y: 0;
+$nav-link-padding-x: $spacer * 1.938;
+$navbar-padding-y: $spacer;
+$nav-link-font-weight: $font-weight-bold;
+$navbar-nav-link-padding-y: $spacer;

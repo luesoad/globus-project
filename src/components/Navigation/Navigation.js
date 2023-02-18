@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons/faYoutube";
 import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF";
 import { faSquareInstagram } from "@fortawesome/free-brands-svg-icons/faSquareInstagram";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./navigation.scss";
 
 const navItems = [
@@ -50,12 +51,24 @@ const Navigation = () => {
               ))}
             </ul>
             <div className="d-flex flex-column">
-              <div>
-                <FontAwesomeIcon icon={faYoutube} />
-                <FontAwesomeIcon icon={faFacebookF} />
-                <FontAwesomeIcon icon={faSquareInstagram} />
-              </div>
-              <div>
+              <ul className="navbar-nav navbar-nav--sm">
+                <li className="nav-item">
+                  <a className="nav-link d-flex">
+                    <FontAwesomeIcon
+                      icon={faUser}
+                      className="fa__user fa__text"
+                    />
+                    Anmelden
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link d-flex">Kontakt</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link d-flex">Newsletter</a>
+                </li>
+              </ul>
+              <div class="d-flex justify-content-end">
                 <FontAwesomeIcon icon={faYoutube} />
                 <FontAwesomeIcon icon={faFacebookF} />
                 <FontAwesomeIcon icon={faSquareInstagram} />

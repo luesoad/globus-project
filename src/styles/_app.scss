@@ -1,5 +1,8 @@
 // override bootstrap variables
-@import "./variables";
+@import "./variables-bootstrap";
 // import bootstrap
 @import "./custom";
+@import "./variables";
 @import "./global";
+@import "./utilities";
+@import "./icons";

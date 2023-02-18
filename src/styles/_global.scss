@@ -2,3 +2,7 @@
   --bs-font-sans-serif: "Fira Sans Condensed";
   --bs-light-rgb: $white;
 }
+
+a {
+  font-weight: $font-weight-bold;
+}

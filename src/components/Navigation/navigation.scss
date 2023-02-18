@@ -1,9 +1,11 @@
-@import "../../styles/app.scss";
+@import "../../styles/app";
 $navbar-logo-width: 150px;
 
 // Über Newsletter: 24px
 //Abstand nav-item nach unten: 28px; nach oben: 62px;
 //Abstand zwischen nav-items: 31px;
+//Abstand nav-items rechts oben nach unten: 20px; zwischen: 14px; Anmelden nach rechts: 31px;
+// Abstand icons: ~22px;
 
 .navbar {
   &__logo {
@@ -16,3 +18,10 @@ $navbar-logo-width: 150px;
     //margin-bottom: $spacer * 1.25;
   }
 }
+
+.navbar-nav--sm {
+  //font-size: $font-size-xs;
+}
+
+//@TODO: nav-link last kein lr
+//@TODO: margin icons rechts (d-flex)

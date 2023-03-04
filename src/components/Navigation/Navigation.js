@@ -31,11 +31,8 @@ const Navigation = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a
-            className="navbar-brand navbar__logo position-absolute pt-0 top-0"
-            href="#"
-          >
-            <img src={logo} alt="logo" width="150" />
+          <a className="navbar-brand navbar__logo" href="#">
+            <img src={logo} alt="logo" />
           </a>
           <div className="d-flex justify-content-between flex-grow-1 navbar__list">
             <ul className="navbar-nav">
@@ -53,7 +50,7 @@ const Navigation = () => {
             <div className="d-flex flex-column">
               <ul className="navbar-nav navbar-nav--sm">
                 <li className="nav-item">
-                  <a className="nav-link d-flex">
+                  <a className="nav-link d-flex" href="#">
                     <FontAwesomeIcon
                       icon={faUser}
                       className="fa__user fa__text"
@@ -62,10 +59,14 @@ const Navigation = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link d-flex">Kontakt</a>
+                  <a className="nav-link d-flex" href="#">
+                    Kontakt
+                  </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link d-flex">Newsletter</a>
+                  <a className="nav-link d-flex" href="#">
+                    Newsletter
+                  </a>
                 </li>
               </ul>
               <div class="d-flex justify-content-end">

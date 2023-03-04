@@ -1,5 +1,5 @@
 @import "../../styles/app";
-$navbar-logo-width: 150px;
+$navbar-logo-width: 154px;
 
 // Über Newsletter: 24px
 //Abstand nav-item nach unten: 28px; nach oben: 62px;
@@ -9,19 +9,36 @@ $navbar-logo-width: 150px;
 
 .navbar {
   &__logo {
-    width: $navbar-logo-width;
+    display: none;
   }
 
   &__list {
-    //margin-top: $spacer * 3.75;
     margin-left: calc($navbar-logo-width + $spacer);
-    //margin-bottom: $spacer * 1.25;
   }
 }
 
 .navbar-nav--sm {
-  //font-size: $font-size-xs;
+  display: none;
 }
 
 //@TODO: nav-link last kein lr
 //@TODO: margin icons rechts (d-flex)
+
+@include media-breakpoint-up(md) {
+  .navbar-nav--sm {
+    display: flex;
+
+    .nav-link {
+      font-size: $font-size-sm;
+    }
+  }
+  .navbar__logo {
+    position: absolute;
+    top: 2px;
+    display: block;
+
+    img {
+      width: $navbar-logo-width;
+    }
+  }
+}
